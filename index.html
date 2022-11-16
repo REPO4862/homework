@@ -59,6 +59,38 @@
             	printf("\n%d in %s school", sc.grade, sc.school);
             	printf("\n%d in %s school", n.grade, n.school);
             	return 0;
-            }</pre>
+            }
+            ========================================================================================================================================
+            #pragma warning(disable:4996)
+#include<stdio.h>
+#include<string.h>
+#include<windows.h>
+
+struct score {
+	char name[20];
+	int kor, eng;
+};
+
+void hap(score a, score b, score &hap) {
+	strcpy(hap.name, "합계");
+	hap.kor = a.kor + b.kor;
+	hap.eng = a.eng + b.eng;
+}
+
+int main(){
+	score a, b, h;
+	scanf("%s %d %d", a.name, &a.kor, &a.eng);
+	scanf("%s %d %d", b.name, &b.kor, &b.eng);
+
+	system("cls");
+	
+	hap(a, b, h);
+	
+	printf("%s %d %d\n", a.name, a.kor, a.eng);
+	printf("%s %d %d\n", b.name, b.kor, b.eng);
+	printf("%s %d %d\n", h.name, h.kor, h.eng);
+
+	return 0;
+}</pre>
 </body>
 </html>
